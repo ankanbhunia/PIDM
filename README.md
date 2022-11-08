@@ -26,9 +26,9 @@ The pose-guided person image generation task requires synthesizing photorealisti
 
 ## Generated Results
 
-You can directly download our test results from Google Drive: (1) [PIDM.zip]() (2) [PIDM_vs_Others.zip]()
+You can directly download our test results from Google Drive: (1) [PIDM.zip](https://drive.google.com/file/d/1zcyTF37UrOmUqtRwwq1kgkyxnNX3oaQN/view?usp=share_link) (2) [PIDM_vs_Others.zip](https://drive.google.com/file/d/1iu75RVQBjR-TbB4ZQUns1oalzYZdNqGS/view?usp=share_link)
 
-The [PIDM_vs_Others.zip]() file compares our method with several state-of-the-art methods e.g. ADGAN [14], PISE [24], GFLA [20], DPTN [25], CASD [29],
+The [PIDM_vs_Others.zip](https://drive.google.com/file/d/1iu75RVQBjR-TbB4ZQUns1oalzYZdNqGS/view?usp=share_link) file compares our method with several state-of-the-art methods e.g. ADGAN [14], PISE [24], GFLA [20], DPTN [25], CASD [29],
 NTED [19]. Each row contains target_pose, source_image, ground_truth, ADGAN, PISE, GFLA, DPTN, CASD, NTED, and PIDM (ours) respectively. 
 Some of the results are shown below. 
 
