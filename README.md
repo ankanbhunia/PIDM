@@ -9,7 +9,7 @@
 </p> 
 
 <p align="center">
-<img src=Figures/mainfig.jpg>
+<img src=Figures/github.jpg>
 </p>
 
  
@@ -22,6 +22,3 @@
 [Fahad Khan](https://scholar.google.ch/citations?user=zvaeYnUAAAAJ&hl=en&oi=ao)
 
 
-<p align="center">
-<img src=Figures/github_qual.jpg>
-</p>
