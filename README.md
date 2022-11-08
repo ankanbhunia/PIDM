@@ -2,7 +2,7 @@
 Person Image Synthesis via Denoising Diffusion Model
 
 <p align="center">
-<img src=Figures/mainfig.pdf>
+<img src=Figures/mainfig.png>
 </p>
 
 <p align="center">
