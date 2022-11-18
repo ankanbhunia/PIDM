@@ -7,7 +7,9 @@
     <a href="">Paper</a>
   </b>
 </p> 
-
+<p align="center">
+<img src=Figures/gif.jpg>
+</p>
 <p align="center">
 <img src=Figures/mainfig.jpg>
 </p>
