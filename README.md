@@ -18,12 +18,7 @@
 [Mubarak Shah](https://scholar.google.com/citations?user=p8gsO3gAAAAJ&hl=en) &
 [Fahad Khan](https://scholar.google.ch/citations?user=zvaeYnUAAAAJ&hl=en&oi=ao)
  
-## Architecture
- 
-</p>
-<p align="center">
-<img src=Figures/mainfig.jpg>
-</p>
+
 
 ## Generated Results
 
@@ -35,6 +30,13 @@ Some of the results are shown below.
 
 <p align="center">
 <img src=Figures/github_qual.jpg>
+</p>
+
+## Architecture
+ 
+</p>
+<p align="center">
+<img src=Figures/mainfig.jpg>
 </p>
 
 ## Citation
