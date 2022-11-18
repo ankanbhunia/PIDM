@@ -8,7 +8,7 @@
   </b>
 </p> 
 <p align="center">
-<img src=Figures/images.jpg>
+<img src=Figures/images.gif>
 </p>
 <p align="center">
 <img src=Figures/mainfig.jpg>
