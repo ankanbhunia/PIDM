@@ -1,4 +1,4 @@
-# PIDM - Person Image Synthesis via Denoising Diffusion Model
+# Person Image Synthesis via Denoising Diffusion Model
 
  <p align='center'>
   <b>
