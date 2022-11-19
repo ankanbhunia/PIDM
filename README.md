@@ -32,12 +32,6 @@ Some of the results are shown below.
 <img src=Figures/github_qual.jpg>
 </p>
 
-## Architecture
- 
-</p>
-<p align="center">
-<img src=Figures/mainfig.jpg>
-</p>
 
 ## Citation
 
