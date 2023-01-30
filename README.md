@@ -2,7 +2,7 @@
 
  <p align='center'>
   <b>
-    <a href="https://arxiv.org/abs/2104.0ede">ArXiv</a>
+    <a href="https://arxiv.org/abs/2211.12500">ArXiv</a>
     | 
     <a href="">Paper</a>
   </b>
@@ -21,6 +21,8 @@
 
 
 ## Generated Results
+
+<img src=Figures/itw.png>
 
 You can directly download our test results from Google Drive: (1) [PIDM.zip](https://drive.google.com/file/d/1zcyTF37UrOmUqtRwwq1kgkyxnNX3oaQN/view?usp=share_link) (2) [PIDM_vs_Others.zip](https://drive.google.com/file/d/1iu75RVQBjR-TbB4ZQUns1oalzYZdNqGS/view?usp=share_link)
 
