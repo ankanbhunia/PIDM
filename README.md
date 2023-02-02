@@ -1,4 +1,4 @@
-# Person Image Synthesis via Denoising Diffusion Model [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ankanbhunia/PIDM/blob/main/pidm-demo.ipynb)
+# Person Image Synthesis via Denoising Diffusion Model [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ankanbhunia/PIDM/blob/main/PIDM_demo.ipynb)
 
  <p align='center'>
   <b>
@@ -6,7 +6,7 @@
     | 
     <a href="">Paper</a>
     | 
-    <a href="https://colab.research.google.com/github/ankanbhunia/PIDM/blob/main/pidm-demo.ipynb">Demo</a>
+    <a href="https://colab.research.google.com/github/ankanbhunia/PIDM/blob/main/PIDM_demo.ipynb">Demo</a>
   </b>
 </p> 
 <p align="center">
