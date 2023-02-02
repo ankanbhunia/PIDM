@@ -1,10 +1,12 @@
-# Person Image Synthesis via Denoising Diffusion Model
+# Person Image Synthesis via Denoising Diffusion Model [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ankanbhunia/PIDM/blob/main/pidm-demo.ipynb)
 
  <p align='center'>
   <b>
     <a href="https://arxiv.org/abs/2211.12500">ArXiv</a>
     | 
     <a href="">Paper</a>
+    | 
+    <a href="https://colab.research.google.com/github/ankanbhunia/PIDM/blob/main/pidm-demo.ipynb">Demo</a>
   </b>
 </p> 
 <p align="center">
