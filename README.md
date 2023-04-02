@@ -19,8 +19,6 @@
     :rocket:
     [Demo on Colab](https://colab.research.google.com/github/ankanbhunia/PIDM/blob/main/PIDM_demo.ipynb)
     
-- **2023.02** Codes will be available soon!
-
 
 
 ## Generated Results
@@ -36,6 +34,90 @@ Some of the results are shown below.
 <p align="center">
 <img src=Figures/github_qual.jpg>
 </p>
+
+
+
+## Dataset
+
+- Download `img_highres.zip` of the DeepFashion Dataset from [In-shop Clothes Retrieval Benchmark](https://drive.google.com/drive/folders/0B7EVK8r0v71pYkd5TzBiclMzR00). 
+
+- Unzip `img_highres.zip`. You will need to ask for password from the [dataset maintainers](http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion/InShopRetrieval.html). Then rename the obtained folder as **img** and put it under the `./dataset/deepfashion` directory. 
+
+- We split the train/test set following [GFLA](https://github.com/RenYurui/Global-Flow-Local-Attention). Several images with significant occlusions are removed from the training set. Download the train/test pairs and the keypoints `pose.zip` extracted with [Openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) by runing: 
+
+  ```bash
+  cd scripts
+  ./download_dataset.sh
+  ```
+
+  Or you can download these files manually：
+
+  - Download the train/test pairs from [Google Drive](https://drive.google.com/drive/folders/1PhnaFNg9zxMZM-ccJAzLIt2iqWFRzXSw?usp=sharing) including **train_pairs.txt**, **test_pairs.txt**, **train.lst**, **test.lst**. Put these files under the  `./dataset/deepfashion` directory. 
+  - Download the keypoints `pose.rar` extracted with Openpose from [Google Driven](https://drive.google.com/file/d/1waNzq-deGBKATXMU9JzMDWdGsF4YkcW_/view?usp=sharing). Unzip and put the obtained floder under the  `./dataset/deepfashion` directory.
+
+- Run the following code to save images to lmdb dataset.
+
+  ```bash
+  python data/prepare_data.py \
+  --root ./dataset/deepfashion \
+  --out ./dataset/deepfashion
+  ```
+
+
+#### Conda Installation
+
+``` bash
+# 1. Create a conda virtual environment.
+conda create -n PIDM python=3.6
+conda activate PIDM
+conda install -c pytorch pytorch=1.7.1 torchvision cudatoolkit=10.2
+
+# 2. Clone the Repo and Install dependencies
+git clone https://github.com/ankanbhunia/PIDM
+pip install -r requirements.txt
+
+```
+
+
+## Training 
+
+This code supports multi-GPUs training.
+
+  ```bash
+python -m torch.distributed.launch --nproc_per_node=1 --master_port 48949 train.py \
+--dataset_path "./dataset/deepfashion" --batch_size 8 --exp_name "pidm_deepfashion"
+
+  ```
+
+
+## Inference 
+
+For pose control use ```obj.predict_pose``` as in the following code snippets. 
+
+  ```bash
+from predict import Predictor
+obj = Predictor()
+
+obj.predict_pose(image=<PATH_OF_SOURCE_IMAGE>, sample_algorithm='ddim', num_poses=4, nsteps=50)
+
+  ```
+
+For apperance control use ```obj.predict_appearance```
+
+  ```bash
+from predict import Predictor
+obj = Predictor()
+
+
+ref_img = "data/deepfashion_256x256/target_edits/reference_img_61.png"
+ref_mask = "data/deepfashion_256x256/target_mask/upper/reference_mask_61.png"
+ref_pose = "data/deepfashion_256x256/target_pose/reference_pose_61.npy"
+
+obj.predict_appearance(image=src, ref_img = ref_img, ref_mask = ref_mask, ref_pose = ref_pose, sample_algorithm = 'ddim',  nsteps = 50)
+
+  ```
+
+The output will be saved as ```output.png``` filename.
 
 
 ## Citation

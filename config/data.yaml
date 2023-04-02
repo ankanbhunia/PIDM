@@ -1,0 +1,18 @@
+distributed: False
+
+data:
+    type: data.fashion_data::Dataset
+    preprocess_mode: resize_and_crop
+    path: /home/ankanbhunia/Downloads/pidm-demo/dataset/deepfashion
+    num_workers: 8
+    sub_path: 256-256
+    resolution: 256
+    scale_param: 0.05
+    train:
+      batch_size: 8           # real_batch_size: 4 * 2 (source-->target & target --> source) * 2 (GPUs) = 16
+      distributed: False
+    val:
+      batch_size: 8
+      distributed: False
+
+
