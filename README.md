@@ -60,7 +60,7 @@ NTED [19]. Each row contains target_pose, source_image, ground_truth, ADGAN, PIS
   ```
 
 
-#### Conda Installation
+## Conda Installation
 
 ``` bash
 # 1. Create a conda virtual environment.
