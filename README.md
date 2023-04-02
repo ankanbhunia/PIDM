@@ -23,8 +23,8 @@
     
 
 
-<img src="https://raw.githubusercontent.com/ankanbhunia/PIDM/main/Figures/intro1.png>
-<img src="https://raw.githubusercontent.com/ankanbhunia/PIDM/main/Figures/intro2.png>
+<img src="https://raw.githubusercontent.com/ankanbhunia/PIDM/main/Figures/intro1.png">
+<img src="https://raw.githubusercontent.com/ankanbhunia/PIDM/main/Figures/intro2.png">
  
  
 ## Generated Results
