@@ -88,6 +88,7 @@ python -m torch.distributed.launch --nproc_per_node=8 --master_port 48949 train.
 
 ## Inference 
 
+Download the pretrained model from [here](https://drive.google.com/file/d/1WkV5Pn-_fBdiZlvVHHx_S97YESBkx4lD/view?usp=share_link) and place it in the ```checkpoints``` folder.
 For pose control use ```obj.predict_pose``` as in the following code snippets. 
 
   ```python
