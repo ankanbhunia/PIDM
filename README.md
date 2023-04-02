@@ -94,7 +94,7 @@ python -m torch.distributed.launch --nproc_per_node=1 --master_port 48949 train.
 
 For pose control use ```obj.predict_pose``` as in the following code snippets. 
 
-  ```bash
+  ```python
 from predict import Predictor
 obj = Predictor()
 
@@ -104,7 +104,7 @@ obj.predict_pose(image=<PATH_OF_SOURCE_IMAGE>, sample_algorithm='ddim', num_pose
 
 For apperance control use ```obj.predict_appearance```
 
-  ```bash
+  ```python
 from predict import Predictor
 obj = Predictor()
 
