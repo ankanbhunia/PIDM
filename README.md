@@ -29,11 +29,7 @@ You can directly download our test results from Google Drive: (1) [PIDM.zip](htt
 
 The [PIDM_vs_Others.zip](https://drive.google.com/file/d/1iu75RVQBjR-TbB4ZQUns1oalzYZdNqGS/view?usp=share_link) file compares our method with several state-of-the-art methods e.g. ADGAN [14], PISE [24], GFLA [20], DPTN [25], CASD [29],
 NTED [19]. Each row contains target_pose, source_image, ground_truth, ADGAN, PISE, GFLA, DPTN, CASD, NTED, and PIDM (ours) respectively. 
-<!-- Some of the results are shown below. 
 
-<p align="center">
-<img src=Figures/github_qual.jpg>
-</p> -->
 
 
 
