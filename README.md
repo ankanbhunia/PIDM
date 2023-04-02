@@ -108,10 +108,10 @@ For apperance control use ```obj.predict_appearance```
 from predict import Predictor
 obj = Predictor()
 
-
-ref_img = "data/deepfashion_256x256/target_edits/reference_img_61.png"
-ref_mask = "data/deepfashion_256x256/target_mask/upper/reference_mask_61.png"
-ref_pose = "data/deepfashion_256x256/target_pose/reference_pose_61.npy"
+src = <PATH_OF_SOURCE_IMAGE>
+ref_img = <PATH_OF_REF_IMAGE>
+ref_mask = <PATH_OF_REF_MASK>
+ref_pose = <PATH_OF_REF_POSE>
 
 obj.predict_appearance(image=src, ref_img = ref_img, ref_mask = ref_mask, ref_pose = ref_pose, sample_algorithm = 'ddim',  nsteps = 50)
 
