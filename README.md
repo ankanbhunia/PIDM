@@ -22,8 +22,11 @@
     [Demo on Colab](https://colab.research.google.com/github/ankanbhunia/PIDM/blob/main/PIDM_demo.ipynb)
     
 
-        <a href="https://raw.githubusercontent.com/ankanbhunia/PIDM/main/Figures/intro2.png" target="_blank">
-    <img src="https://raw.githubusercontent.com/ankanbhunia/PIDM/main/Figures/intro2.png"></a>
+
+<img src="https://raw.githubusercontent.com/ankanbhunia/PIDM/main/Figures/intro1.png>
+<img src="https://raw.githubusercontent.com/ankanbhunia/PIDM/main/Figures/intro2.png>
+ 
+ 
 ## Generated Results
 
 
