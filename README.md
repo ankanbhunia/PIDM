@@ -22,10 +22,10 @@
     [Demo on Colab](https://colab.research.google.com/github/ankanbhunia/PIDM/blob/main/PIDM_demo.ipynb)
     
 
-
+        <a href="https://raw.githubusercontent.com/ankanbhunia/PIDM/main/Figures/intro2.png" target="_blank">
+    <img src="https://raw.githubusercontent.com/ankanbhunia/PIDM/main/Figures/intro2.png"></a>
 ## Generated Results
 
-<img src=Figures/itw.jpg>
 
 You can directly download our test results from Google Drive: (1) [PIDM.zip](https://drive.google.com/file/d/1zcyTF37UrOmUqtRwwq1kgkyxnNX3oaQN/view?usp=share_link) (2) [PIDM_vs_Others.zip](https://drive.google.com/file/d/1iu75RVQBjR-TbB4ZQUns1oalzYZdNqGS/view?usp=share_link)
 
