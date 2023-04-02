@@ -13,6 +13,7 @@
 </p> 
 <p align="center">
 <img src=Figures/images.gif>
+ 
 ## News
 
 - **2023.02** A demo available through Google Colab:
