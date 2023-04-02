@@ -328,6 +328,7 @@ if __name__ == "__main__":
 
     if is_main_process():
 
+        if not os.path.isdir(args.save_path): os.mkdir(args.save_path)
         if not os.path.isdir(DiffConf.training.ckpt_path): os.mkdir(DiffConf.training.ckpt_path)
 
     #DiffConf.ckpt = "checkpoints/last.pt"
