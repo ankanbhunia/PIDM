@@ -127,8 +127,8 @@ If you use the results and code for your research, please cite our paper:
 @article{bhunia2022pidm,
   title={Person Image Synthesis via Denoising Diffusion Model},
   author={Bhunia, Ankan Kumar and Khan, Salman and Cholakkal, Hisham and Anwer, Rao Muhammad and Laaksonen, Jorma and Shah, Mubarak and Khan, Fahad Shahbaz},
-  journal={arXiv},
-  year={2022}
+  journal={CVPR},
+  year={2023}
 }
 ```
 
