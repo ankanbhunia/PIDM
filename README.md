@@ -69,7 +69,7 @@ NTED [19]. Each row contains target_pose, source_image, ground_truth, ADGAN, PIS
 # 1. Create a conda virtual environment.
 conda create -n PIDM python=3.6
 conda activate PIDM
-conda install -c pytorch pytorch=1.7.1 torchvision cudatoolkit=10.2
+conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
 
 # 2. Clone the Repo and Install dependencies
 git clone https://github.com/ankanbhunia/PIDM
