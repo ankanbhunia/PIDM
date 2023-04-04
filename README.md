@@ -87,7 +87,7 @@ python -m torch.distributed.launch --nproc_per_node=8 --master_port 48949 train.
 --dataset_path "./dataset/deepfashion" --batch_size 8 --exp_name "pidm_deepfashion"
 
   ```
-
+<img src=Figures/main.png>
 
 ## Inference 
 
