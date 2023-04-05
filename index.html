@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://xiaoming-zhao.github.io/projects/gmpi/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<style>
+
+.main {
+  float: center;
+  width: 65%; /* The width is 60%, by default */
+}
+
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 800px) {
+  .main{
+    width: 95%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+</style>
+
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="Person Image Synthesis via Denoising Diffusion Model | CVPR 2023">
+		<meta name="keywords" content="CVPR 2023, Computer Vision, Generative Models">
+	    <title>Person Image Synthesis via Denoising Diffusion Model </title>
+	    <!-- Bootstrap -->
+	    <link href="./src/bootstrap-4.4.1.css" rel="stylesheet">
+	    <link href="./src/css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="./src/academicons.min.css">
+		<link rel="stylesheet" href="./src/all.css">
+		<link href="./src/main.css" rel="stylesheet" type="text/css">
+
+		<!-- from EG3D: https://nvlabs.github.io/eg3d/ -->
+		<link rel="stylesheet" href="./src/box_swipe.css">
+   		<script src="./src/box_swipe.js.download"></script>
+	</head>
+	
+	<body><div class="jumbotron jumbotron-fluid text-center mt-0">
+		<div class="container titlecontainer">
+			<div class="row">
+				<div class="col">
+					<h1>Person Image Synthesis via Denoising Diffusion Model </h1>
+		
+					<h4><a href="http://cvpr2023.thecvf.com/" target="_blank">CVPR 2023</a></h4>
+					<hr>
+					<p>
+						<a href="https://ankanbhunia.github.io">Ankan Kumar Bhunia</a>, &nbsp;&nbsp; 
+						<a href="https://scholar.google.com/citations?user=M59O9lkAAAAJ&hl=en" target="_blank">Salman Khan</a>, &nbsp;&nbsp;
+						<a href="https://scholar.google.com/citations?user=bZ3YBRcAAAAJ&hl=en" target="_blank">Hisham Cholakkal</a>, &nbsp;&nbsp;
+						<a href="https://scholar.google.fi/citations?user=_KlvMVoAAAAJ&hl=en" target="_blank">Rao Muhammad Anwer</a> <br>
+						<a href="https://scholar.google.com/citations?user=p8gsO3gAAAAJ&hl=en" target="_blank">Jorma Laaksonen</a>, &nbsp;&nbsp;
+						<a href="https://scholar.google.com/citations?user=p8gsO3gAAAAJ&hl=en" target="_blank">Mubarak Shah</a>, &nbsp;&nbsp;
+						<a href="https://scholar.google.ch/citations?user=zvaeYnUAAAAJ&hl=en" target="_blank">Fahad Shahbaz Khan</a>, &nbsp;&nbsp;
+
+					</p>
+			
+
+			
+<!-- 					<p>
+						<br>
+						<sup>1</sup>MBZUAI, UAE &nbsp;&nbsp; <br>
+						<sup>2</sup>Australian National University, Australia<br>
+						<sup>3</sup>University of Central Florida, USA<br>
+						<sup>4</sup>Linköping University, Sweden<br>
+						<br>
+					</p> -->
+						
+					<div class="row justify-content-center">
+						<!-- <div class="column">
+							<p class="my-auto mx-1">
+								Use "btn btn-large btn-light" when the button is available
+								<a class="btn btn-large btn-secondary disabled" href="" role="button" target="_blank">
+									<span class="icon">
+										<i class="fas fa-file-pdf fa-fw"></i>
+									</span>
+									<span>Paper</span>
+								</a>
+							</p>
+						</div> -->
+						<div class="column">
+							<p class="my-auto mx-1">
+								<a class="btn btn-large btn-light" href="https://arxiv.org/abs/2211.12500" role="button" target="_blank">
+									
+									<span>arXiv</span>
+								</a>
+							</p>
+						</div>
+					<div class="column">
+							<p class="my-auto mx-1">
+								<a class="btn btn-large btn-light" href="https://www.youtube.com/embed/cHdZTZurX8M" role="button" target="_blank">
+									<span>Youtube</span>
+								</a>
+							</p>
+						</div> 
+						<div class="column">
+							<p class="my-auto mx-1">
+								<a class="btn btn-large btn-light" href="https://github.com/ankanbhunia/PDIM" role="button" target="_blank">
+									
+									<span>Code</span>
+								</a>
+							</p>
+						</div>
+						
+						<div class="column">
+							<p class="my-auto mx-1">
+								<a class="btn btn-large btn-light" href="https://colab.research.google.com/github/ankanbhunia/PIDM/blob/main/PIDM_demo.ipynb" role="button" target="_blank">
+									
+									<span>Demo</span>
+								</a>
+							</p>
+						</div>
+								
+						
+						<div class="column">
+							<p class="my-auto mx-1">
+								<a class="btn btn-large btn-light" href="" target="_blank">
+									
+									<span>Supplementary</span>
+								</a>
+							</p>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+	    </div>
+	</div>
+
+<figure align="center" >
+	<img src="./src/img1.png" class="main">
+	<div align='center'>
+  <figcaption align='justify' class='main'>PIDM accurately retains the appearance of the source style image while
+also producing images that are natural and sharper.</figcaption>
+</div>
+</figure>
+
+<hr>
+<b><h3 align="center">
+	Overview
+</h3></b>
+
+
+<figure align="center" >
+	<img src="./src/img4.png" class="main">
+	<div align='center'>
+  <figcaption align='justify' class='main'>In this
+work, we show how denoising diffusion models can be applied for high-fidelity person image synthesis with strong
+sample diversity and enhanced mode coverage of the learnt
+data distribution. Our proposed Person Image Diffusion
+Model (PIDM) disintegrates the complex transfer problem
+into a series of simpler forward-backward denoising steps.
+This helps in learning plausible source-to-target transformation trajectories that result in faithful textures and undistorted appearance details. We introduce a ‘texture diffusion
+module’ based on cross-attention to accurately model the
+correspondences between appearance and pose information available in source and target images. Further, we propose ‘disentangled classifier-free guidance’ to ensure close
+resemblance between the conditional inputs and the synthesized output in terms of both pose and appearance information.</figcaption>
+</div>
+</figure>
+<hr>
+<b><h3 align="center">
+	A. Qualitative Results of Pose Control
+</h3></b>
+
+<figure align="center" >
+	<img src="./src/intro.png" class="main">
+	<div align='center'>
+  <figcaption align='justify' class='main'>
+	Qualitative Results of Pose Control: Results of synthesizing person images at multiple poses using our proposed PIDM. The left column contains the source images.</figcaption>
+</div>
+</figure>
+<hr>
+<b><h3 align="center">
+	B. Qualitative Results of Appearance Control
+</h3></b>
+
+<figure align="center" >
+	<img src="./src/img2.png" class="main">
+	<div align='center'>
+  <figcaption align='justify' class='main'>
+	The results demonstrate the seamless editing capabilities of our model. Images are generated by controlling the appearance of the reference image while maintaining the person’s pose and identity. For each example, the first row contains the style images and the second row contains the generated images
+.</figcaption>
+</div>
+</figure>
+<hr>
+
+<!-- <b><h3 align="center">
+	Qualitative Comparsion with existing methods
+</h3></b>
+ -->
+<!-- 
+<figure align="center" >
+	<img src="./src/img3.png" class="main">
+	<div align='center'>
+  <figcaption align='justify' class='main'>
+Qualitative comparisons with several state-of-the-art models on the DeepFashion dataset. The inputs to the model are the target pose xp and the source image xs. From left-to-right the results are of ADGAN [14], PISE [23], GFLA [19], DPTN [24], CASD [28],
+NTED [18] and ours respectively.</figcaption>
+</div>
+</figure>
+<hr> -->
+<b><h3 align="center">
+	C. Qualitative Results in-the-wild scenarios
+</h3></b>
+
+<figure align="center" >
+	<img src="https://raw.githubusercontent.com/ankanbhunia/PIDM/main/Figures/intro_fig.jpg" class="main">
+	<div align='center'>
+  <figcaption align='justify' class='main'>
+Our model generalizes well to in-the-wild cases. The source style image (left-most, only ONE) in the above example is taken from an online e-commerce fashion site. PIDM successfully generates multiple pose representation of the given source image.st row contains the style images and the second row contains the generated images.</figcaption>
+</div>
+</figure>
+<hr>
+
+	
+	
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <hr style="margin-top:0px">
+
+<iframe width="100%" height="400px" src="https://www.youtube.com/embed/cHdZTZurX8M" title="Lecture 13 - Person Image Synthesis via Denoising Diffusion Model" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+	 <!-- 	 <p align="center">
+	<img src="https://raw.githubusercontent.com/ankanbhunia/doodleformer/main/figures/qual360.jpg" width="800">
+	</p> -->
+
+
+
+	<div class="container">
+
+		<!-- bibtex -->
+		<div class="row">
+			<div class="col-sm">
+				<div class="text-left">
+
+					<hr>
+					<h3>Bibtex</h3>
+
+					<pre style="background-color: #f4f4f4;"><code>
+    @InProceedings{Bhunia_2021_ICCV,
+    author    = {Bhunia, Ankan Kumar and Khan, Salman and Cholakkal, Hisham and Anwer, Rao Muhammad and Khan, Fahad Shahbaz and Shah, Mubarak},
+    title     = {Handwriting Transformers},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2021},
+    pages     = {1086-1094}}</code>
+					</pre>
+				</div>
+			</div>
+		</div>
+
+			<!-- acknowledgements -->
+			<!-- <div class="section">
+				<hr>
+				<h3>Acknowledgements</h3>
+
+				<p class="text-left">Work done as part of Xiaoming Zhao's internship at Apple. Supported in part by NSF grants 1718221, 2008387, 2045586, 2106825, MRI #1725729, NIFA award 2020-67021-32799</p>
+			</div> -->
+
+		</div>
+	
+
+	<script>
+		initComparisons();
+		linkVideos(0);
+		linkVideos(1);
+		linkVideos(2);
+	</script>
+
+
+
+	<footer class="text-center" style="margin-bottom:40px; font-size: medium;">
+	    <hr>
+	    Thanks to <a href="https://www.cs.utexas.edu/~yzp12/" target="_blank">Zhenpei Yang</a> for the <a href="https://zhenpeiyang.github.io/MVS2D/" target="_blank">website template</a>. 
+	</footer>
+
+<iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;" src="./src/saved_resource.html"></iframe><div id="GOOGLE_INPUT_CHEXT_FLAG" input="" input_stat="{&quot;tlang&quot;:true,&quot;tsbc&quot;:true,&quot;pun&quot;:true,&quot;mk&quot;:true,&quot;ss&quot;:true}" style="display: none;"></div></body></html>
