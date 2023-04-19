@@ -25,9 +25,7 @@ def compute_alpha(beta, t):
 
 def ddim_steps(x, seq, model, b, x_cond, diffusion = None, **kwargs):
     x_cond[0] = [model.encode(x_cond[0])['cond'], model.encode(torch.zeros_like(x_cond[0]))['cond']]
-
-    x_cond[0][0] = [torch.stack([i*feat[0] + (1-i)*feat[-1] for i in torch.linspace(0,1,len(feat))], 0) for feat in x_cond[0][0]]
-
+    
     with torch.no_grad():
         n = x.size(0)
         seq_next = [-1] + list(seq[:-1])
