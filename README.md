@@ -61,6 +61,31 @@ NTED [19]. Each row contains target_pose, source_image, ground_truth, ADGAN, PIS
   --root ./dataset/deepfashion \
   --out ./dataset/deepfashion
   ```
+## Custom Dataset
+
+The file structure is as follows:
+
+- dataset/
+- - <dataset_name>/
+- - - img/ 
+- - - pose/
+- - - train_pairs.txt
+- - - test_pairs.txt
+
+You basically will have all your images inside ```img``` folder. You can use different subfolders to store your images or put all your images inside ```img``` folder as well. The corresponding poses are stored inside ```pose``` folder (as txt file if you use openpose. In our project, we use 18-point keypoint estimation). ```train_pairs.txt``` and ```test_pairs.txt``` will have paths of all possible pairs seperated by comma ```<src_path1>,<tgt_path1>```.
+
+After that, run the following command to process the data:
+
+```
+python data/prepare_data.py \
+--root ./dataset/<dataset_name> \
+--out ./dataset/<dataset_name>
+--sizes ((256,256),)
+```
+
+This will create an lmdb dataset ```./dataset/<dataset_name>/256-256/```
+
+
 
 
 ## Conda Installation
