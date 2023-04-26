@@ -63,7 +63,7 @@ NTED [19]. Each row contains target_pose, source_image, ground_truth, ADGAN, PIS
   ```
 ## Custom Dataset
 
-The file structure is as follows:
+The folder structure of any custom dataset should be as follows:
 
 - dataset/
 - - <dataset_name>/
