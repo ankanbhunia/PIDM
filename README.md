@@ -72,7 +72,7 @@ The folder structure of any custom dataset should be as follows:
 - - - train_pairs.txt
 - - - test_pairs.txt
 
-You basically will have all your images inside ```img``` folder. You can use different subfolders to store your images or put all your images inside ```img``` folder as well. The corresponding poses are stored inside ```pose``` folder (as txt file if you use openpose. In our project, we use 18-point keypoint estimation). ```train_pairs.txt``` and ```test_pairs.txt``` will have paths of all possible pairs seperated by comma ```<src_path1>,<tgt_path1>```.
+You basically will have all your images inside ```img``` folder. You can use different subfolders to store your images or put all your images inside the ```img``` folder as well. The corresponding poses are stored inside ```pose``` folder (as txt file if you use openpose. In our project, we use 18-point keypoint estimation). ```train_pairs.txt``` and ```test_pairs.txt``` will have paths of all possible pairs seperated by comma ```<src_path1>,<tgt_path1>```.
 
 After that, run the following command to process the data:
 
