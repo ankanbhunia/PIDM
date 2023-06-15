@@ -1,7 +1,7 @@
 
 ### DDIM Sampling
 ```bash
-python -m torch.distributed.launch --nproc_per_node=8 --master_port 48109  gen.py \ 
+python -m torch.distributed.launch --nproc_per_node=8 --master_port 48109  utils/gen.py \ 
         --exp_name="pidm_deepfashion" \
         --checkpoint_name=last.pt \
         --dataset_path "./dataset/deepfashion/"  \
@@ -9,7 +9,7 @@ python -m torch.distributed.launch --nproc_per_node=8 --master_port 48109  gen.p
 ```
 ### DDPM Sampling
 ```bash
-python -m torch.distributed.launch --nproc_per_node=8 --master_port 48109  gen.py \ 
+python -m torch.distributed.launch --nproc_per_node=8 --master_port 48109  utils/gen.py \ 
         --exp_name="pidm_deepfashion" \
         --checkpoint_name=last.pt \
         --dataset_path "./dataset/deepfashion/"  \
