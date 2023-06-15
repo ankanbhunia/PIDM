@@ -98,7 +98,7 @@ def train(conf, loader, val_loader, model, ema, diffusion, betas, optimizer, sch
     loss_mean_list = []
     loss_vb_list = []
  
-    for epoch in range(1000):
+    for epoch in range(300):
 
         if is_main_process: print ('#Epoch - '+str(epoch))
 
