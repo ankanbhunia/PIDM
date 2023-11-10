@@ -107,7 +107,7 @@ pip install -r requirements.txt
 
 ## Training 
 
-This code supports multi-GPUs training.
+This code supports multi-GPU training. Full training takes 5 days with 8 A100 GPUs and a batch size 8 on the DeepFashion dataset. The model is trained for 300 epochs; however, it generates high-quality usable samples after 200 epochs. We also attempted training with V100 GPUs, and our code takes a similar amount of time for training
 
   ```bash
 python -m torch.distributed.launch --nproc_per_node=8 --master_port 48949 train.py \
