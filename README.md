@@ -92,7 +92,7 @@ This will create an lmdb dataset ```./dataset/<dataset_name>/256-256/```
 
 ``` bash
 # 1. Create a conda virtual environment.
-conda create -n PIDM python=3.6
+conda create -n PIDM python=3.7
 conda activate PIDM
 conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
 
